@@ -24,18 +24,18 @@ class Config():
         # duration [s] of the tactile stimuli
         self.stimuli_duration = config.getfloat("TEST", "stimuli_duration")
         # set of volumes [0.0-1.0] of the tactile stimuli
-        self.stimuli_volumes = [float(vol) for vol in config["TEST"]["stimuli_volumes"].replace(' ','').split(',')]
+        self.stimuli_volumes = [float(vol) for vol in config["RANDOM"]["stimuli_volumes"].replace(' ','').split(',')]
         # set of frequencies [Hz] of the tactile stimuli
-        self.stimuli_frequencies = [int(float(freq)) for freq in config["TEST"]["stimuli_frequencies"].replace(' ','').split(',')]
+        self.stimuli_frequencies = [int(float(freq)) for freq in config["RANDOM"]["stimuli_frequencies"].replace(' ','').split(',')]
         # staircase top stimuli frequency [Hz]
-        self.stimuli_staircase_top_frequency = config.getint("TEST", "stimuli_staircase_top_frequency")
+        self.stimuli_staircase_top_frequency = config.getint("STAIRCASE", "stimuli_staircase_top_frequency")
         # staircase bottom stimuli frequency [Hz]
-        self.stimuli_staircase_bottom_frequency = config.getint("TEST", "stimuli_staircase_bottom_frequency")
+        self.stimuli_staircase_bottom_frequency = config.getint("STAIRCASE", "stimuli_staircase_bottom_frequency")
         # staircase initial (maximum) step stimuli frequency [Hz]
-        self.stimuli_staircase_max_frequency_step = config.getint("TEST", "stimuli_staircase_max_frequency_step")
+        self.stimuli_staircase_max_frequency_step = config.getint("STAIRCASE", "stimuli_staircase_max_frequency_step")
         self.stimuli_staircase_current_step = self.stimuli_staircase_max_frequency_step
         # staircase final (minimum) step stimuli frequency [Hz]
-        self.stimuli_staircase_min_frequency_step = config.getint("TEST", "stimuli_staircase_min_frequency_step")
+        self.stimuli_staircase_min_frequency_step = config.getint("STAIRCASE", "stimuli_staircase_min_frequency_step")
         # pause [s] between beep and stimuli
         self.pause_beep_stimuli = config.getfloat("TEST", "pause_beep_stimuli")
         # pause [s] at the beginning of the test
